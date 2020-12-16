@@ -1,25 +1,22 @@
 section.top{
-    background: url('../img/Doctor-Ease-Hero-Page-BG.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    // background: url('../img/Doctor-Ease-Hero-Page-BG.jpg') no-repeat center center/cover;
+    // background-attachment: fixed;
 }
 section.about{
     .about{
-        &-for,&-nav{
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
         &-for{
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
+            &-item{
+                padding: 60px 0 100px;
+            }
         }
         &-nav{
             background-color: $white;
             text-align: center;
             box-shadow: 0 -6px 12px rgba($black,.16);
-            margin-top: -2rem;
-            padding: 0 2rem;
+            margin-top: -4rem;
             &-item{
                 padding: 1rem;
                 background-color: $white;
@@ -34,6 +31,7 @@ section.about{
                 }
             }
             &-img{
+                max-width: 100%;
                 margin: 0 auto .5rem;
             }
         }
@@ -48,6 +46,7 @@ section.clinic-type{
         }
         &-img{
             max-width: 100%;
+            margin-bottom: 0.5rem;
         }
     }
 }
