@@ -1,0 +1,53 @@
+section.top{
+    background: url('../img/Doctor-Ease-Hero-Page-BG.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+section.about{
+    .about{
+        &-for,&-nav{
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        &-for{
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        &-nav{
+            background-color: $white;
+            text-align: center;
+            box-shadow: 0 -6px 12px rgba($black,.16);
+            margin-top: -2rem;
+            padding: 0 2rem;
+            &-item{
+                padding: 1rem;
+                background-color: $white;
+                position: relative;
+                &:focus{
+                    outline: none;
+                }
+                &.slick-current{
+                    transform: scale(1.2);
+                    box-shadow: 0 3px 6px rgba($black,.16);
+                    z-index: 1;
+                }
+            }
+            &-img{
+                margin: 0 auto .5rem;
+            }
+        }
+    }
+}
+
+section.clinic-type{
+    padding: 140px 0;
+    .clinic-type{
+        &-item{
+            text-align: center;
+        }
+        &-img{
+            max-width: 100%;
+        }
+    }
+}
