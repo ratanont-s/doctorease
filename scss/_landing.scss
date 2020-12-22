@@ -1,36 +1,43 @@
-section.top{
+section.top {
     // background: url('../img/Doctor-Ease-Hero-Page-BG.jpg') no-repeat center center/cover;
     // background-attachment: fixed;
 }
-section.about{
-    .about{
-        &-for{
+
+section.about {
+    .about {
+        &-for {
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
-            &-item{
+
+            &-item {
                 padding: 60px 0 100px;
             }
         }
-        &-nav{
+
+        &-nav {
             background-color: $white;
             text-align: center;
-            box-shadow: 0 -6px 12px rgba($black,.16);
+            box-shadow: 0 -6px 12px rgba($black, .16);
             margin-top: -4rem;
-            &-item{
+
+            &-item {
                 padding: 1rem;
                 background-color: $white;
                 position: relative;
-                &:focus{
+
+                &:focus {
                     outline: none;
                 }
-                &.slick-current{
+
+                &.slick-current {
                     transform: scale(1.2);
-                    box-shadow: 0 3px 6px rgba($black,.16);
+                    box-shadow: 0 3px 6px rgba($black, .16);
                     z-index: 1;
                 }
             }
-            &-img{
+
+            &-img {
                 max-width: 100%;
                 margin: 0 auto .5rem;
             }
@@ -38,15 +45,26 @@ section.about{
     }
 }
 
-section.clinic-type{
+section.clinic-type {
     padding: 140px 0;
-    .clinic-type{
-        &-item{
+
+    .clinic-type {
+        &-item {
             text-align: center;
         }
-        &-img{
+
+        &-img {
             max-width: 100%;
             margin-bottom: 0.5rem;
         }
     }
+}
+
+section.function {
+    background: url('../img/DoctorEase-iPad-Web-02-BG.png') no-repeat center top/100% auto;
+    // .function{
+    //     &-list{
+
+    //     }
+    // }
 }
