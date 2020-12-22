@@ -1,6 +1,20 @@
 section.top {
-    // background: url('../img/Doctor-Ease-Hero-Page-BG.jpg') no-repeat center center/cover;
-    // background-attachment: fixed;
+    @include padding-top(73px);
+
+    .top {
+        &-title {
+            color: $black;
+        }
+
+        &-text {
+            @include font-size(24px);
+            @include margin-bottom(80px);
+        }
+
+        &-btn {
+            @include margin-bottom(34px);
+        }
+    }
 }
 
 section.about {
@@ -13,6 +27,8 @@ section.about {
             &-item {
                 padding: 60px 0 100px;
             }
+
+            &-title {}
         }
 
         &-nav {
@@ -62,9 +78,45 @@ section.clinic-type {
 
 section.function {
     background: url('../img/DoctorEase-iPad-Web-02-BG.png') no-repeat center top/100% auto;
-    // .function{
-    //     &-list{
+}
 
-    //     }
-    // }
+section.price {
+    .table {
+        thead {
+            tr {
+                th {
+                    font-weight: 500;
+
+                    h3,
+                    h4 {
+                        text-align: center;
+                    }
+
+                    h4 {
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                th {
+                    font-weight: normal;
+                }
+
+                td {
+                    text-align: center;
+
+                    .fa-check-circle {
+                        color: $primary;
+                    }
+
+                    .fa-times-circle {
+                        color: $danger;
+                    }
+                }
+            }
+        }
+    }
 }
