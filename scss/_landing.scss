@@ -60,7 +60,7 @@ section.about {
 }
 
 section.clinic-type {
-    padding: 140px 0;
+    @include padding(80px 0);
 
     .clinic-type {
         &-item {
@@ -75,8 +75,14 @@ section.clinic-type {
 }
 
 section.function {
+    @include padding(80px 0 0);
     background: url("../img/DoctorEase-iPad-Web-02-BG.png") no-repeat center
         top/100% auto;
+        .function{
+            &-list{
+                padding-left: 16px;
+            }
+        }
 }
 section.difference {
     @include padding(80px 0);
@@ -93,6 +99,15 @@ section.difference {
             &-title {
                 color: $black;
                 margin-bottom: 1em;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .difference{
+            &-item{
+                &-title,&-text{
+                    text-align: center;
+                }
             }
         }
     }
