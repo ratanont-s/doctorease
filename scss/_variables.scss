@@ -3,7 +3,23 @@ sans-serif;
 
 $primary: #5c59a7;
 $secondary: #dedeed;
+$warning:#f86334;
+$info: #4b1fd9;
+$danger: #f1063d;
 
-$body-color: #57585b;
+$line-color:#00c300;
 
+$body-color: #5e6471;
+
+$font-size-base: .9rem;
 $enable-responsive-font-sizes: true;
+
+$link-hover-decoration: none;
+
+$btn-border-radius:           0;
+$btn-border-radius-lg:        $btn-border-radius;
+$btn-border-radius-sm:        $btn-border-radius;
+
+$input-border-radius:                   0;
+$input-border-radius-lg:                $input-border-radius;
+$input-border-radius-sm:                $input-border-radius;

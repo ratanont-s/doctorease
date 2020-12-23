@@ -1,0 +1,35 @@
+footer{
+    background-color: $light;
+    @include padding(80px 0);
+    .link-map{
+        color: #00aeef;
+        &:hover{
+            color: #00aeef;
+            opacity: 0.5;
+        }
+    }
+    .list-social{
+        li{
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: #a2a2a2;
+                color: $light;
+                &:hover{
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    a{
+        color: $body-color;
+        &:hover{
+            color: $primary;
+        }
+    }
+}

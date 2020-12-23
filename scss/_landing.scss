@@ -27,14 +27,12 @@ section.about {
             &-item {
                 padding: 60px 0 100px;
             }
-
-            &-title {}
         }
 
         &-nav {
             background-color: $white;
             text-align: center;
-            box-shadow: 0 -6px 12px rgba($black, .16);
+            box-shadow: 0 -6px 12px rgba($black, 0.16);
             margin-top: -4rem;
 
             &-item {
@@ -48,14 +46,14 @@ section.about {
 
                 &.slick-current {
                     transform: scale(1.2);
-                    box-shadow: 0 3px 6px rgba($black, .16);
+                    box-shadow: 0 3px 6px rgba($black, 0.16);
                     z-index: 1;
                 }
             }
 
             &-img {
                 max-width: 100%;
-                margin: 0 auto .5rem;
+                margin: 0 auto 0.5rem;
             }
         }
     }
@@ -77,10 +75,31 @@ section.clinic-type {
 }
 
 section.function {
-    background: url('../img/DoctorEase-iPad-Web-02-BG.png') no-repeat center top/100% auto;
+    background: url("../img/DoctorEase-iPad-Web-02-BG.png") no-repeat center
+        top/100% auto;
+}
+section.difference {
+    @include padding(80px 0);
+    .difference {
+        &-item {
+            &-img {
+                display: block;
+                width: auto;
+                height: 120px;
+                object-fit: contain;
+                margin: 0 auto 1em;
+                backdrop-filter: blur(0);
+            }
+            &-title {
+                color: $black;
+                margin-bottom: 1em;
+            }
+        }
+    }
 }
 
 section.price {
+    @include padding(80px 0);
     .table {
         thead {
             tr {
@@ -91,9 +110,24 @@ section.price {
                     h4 {
                         text-align: center;
                     }
-
+                    h3 {
+                        @include font-size(20px);
+                    }
                     h4 {
                         color: $body-color;
+                        @include font-size(30px);
+                        margin-bottom: 1em;
+                    }
+                    &.popular{
+                        border: solid $warning;
+                        border-width: 2px 2px 0;
+                        position: relative;
+                        &-text{
+                            background-color: $warning;
+                            color: $white;
+                            text-align: center;
+                            border: 2px solid $warning;
+                        }
                     }
                 }
             }
@@ -113,10 +147,36 @@ section.price {
                     }
 
                     .fa-times-circle {
-                        color: $danger;
+                        color: $warning;
+                    }
+                    &.popular{
+                        border-left: 2px solid $warning;
+                        border-right: 2px solid $warning;
+                    }
+                }
+                &:last-child{
+                    td{
+                        &.popular{
+                            border-bottom: 2px solid $warning;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+section.contact {
+    background-color: $primary;
+    color: $white;
+    @include padding(80px 0);
+    img {
+        vertical-align: bottom;
+    }
+    a {
+        color: $white;
+        &:hover {
+            opacity: 0.5;
         }
     }
 }
