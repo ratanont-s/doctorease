@@ -7,7 +7,7 @@ section.top {
         }
 
         &-text {
-            
+
             @include margin-bottom(80px);
         }
 
@@ -15,9 +15,10 @@ section.top {
             @include margin-bottom(34px);
         }
     }
-    @include media-breakpoint-up(lg){
-        .top{
-            &-text{
+
+    @include media-breakpoint-up(lg) {
+        .top {
+            &-text {
                 @include font-size(24px);
             }
         }
@@ -25,14 +26,29 @@ section.top {
 }
 
 section.about {
+    @include padding-bottom(80px);
+    overflow: hidden;
+
     .about {
         &-for {
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: right center;
             background-size: cover;
 
             &-item {
                 padding: 60px 0 100px;
+
+                h2 {
+                    @include font-size(40px);
+                }
+
+                h3 {
+                    @include font-size(30px);
+                }
+
+                p {
+                    @include font-size(20px);
+                }
             }
         }
 
@@ -43,27 +59,103 @@ section.about {
             margin-top: -4rem;
 
             &-item {
-                padding: 1rem;
-                background-color: $white;
-                position: relative;
-
                 &:focus {
                     outline: none;
                 }
 
                 &.slick-current {
-                    transform: scale(1.1) translateY(-1rem);
-                    box-shadow: 0 3px 6px rgba($black, 0.16);
-                    z-index: 1;
+                    .about-nav-link {
+                        position: relative;
+                        border-radius: .25rem;
+                        box-shadow: 0 6px 12px rgba($black, 0.16);
+                        transform: translateY(-1em) scale(1.1);
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-left: 20px solid transparent;
+                            border-right: 20px solid transparent;
+                            border-bottom: 20px solid $white;
+                        }
+                    }
+
+                    .about-nav-img {
+                        width: 104px;
+                        height: 104px;
+                    }
                 }
             }
 
-            &-img {
-                max-width: 100%;
-                margin: 0 auto 0.5rem;
+            &-link {
+                @include font-size(20px);
+                display: inline-block;
+                @include padding(20px 30px);
+                background-color: $white;
+                position: relative;
             }
-            .slick{
-                &-list{
+
+            &-img {
+                display: block;
+                width: 68px;
+                height: 68px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+
+            &-receptionist {
+                .about-nav-img {
+                    background-image: url('../img/พนักงานต้อนรับ-1.png');
+                }
+
+                &.slick-current {
+                    .about-nav-img {
+                        background-image: url('../img/พนักงานต้อนรับ-2.png');
+                    }
+                }
+            }
+
+            &-doctor {
+                .about-nav-img {
+                    background-image: url('../img/แพทย์-1.png');
+                }
+
+                &.slick-current {
+                    .about-nav-img {
+                        background-image: url('../img/แพทย์-2.png');
+                    }
+                }
+            }
+
+            &-cashier {
+                .about-nav-img {
+                    background-image: url('../img/แคชเชียร์-1.png');
+                }
+
+                &.slick-current {
+                    .about-nav-img {
+                        background-image: url('../img/แคชเชียร์-2.png');
+                    }
+                }
+            }
+
+            &-owner {
+                .about-nav-img {
+                    background-image: url('../img/เจ้าของคลินิก-1.png');
+                }
+
+                &.slick-current {
+                    .about-nav-img {
+                        background-image: url('../img/เจ้าของคลินิก-2.png');
+                    }
+                }
+            }
+
+            .slick {
+                &-list {
                     overflow: visible;
                 }
             }
@@ -88,16 +180,18 @@ section.clinic-type {
 
 section.function {
     @include padding(80px 0 0);
-    background: url("../img/DoctorEase-iPad-Web-02-BG.png") no-repeat center
-        top/100% auto;
-        .function{
-            &-list{
-                padding-left: 16px;
-            }
+    background: url("../img/DoctorEase-iPad-Web-02-BG.png") no-repeat center top/100% auto;
+
+    .function {
+        &-list {
+            padding-left: 16px;
         }
+    }
 }
+
 section.difference {
     @include padding(80px 0);
+
     .difference {
         &-item {
             &-img {
@@ -108,16 +202,20 @@ section.difference {
                 margin: 0 auto 1em;
                 backdrop-filter: blur(0);
             }
+
             &-title {
                 color: $black;
                 margin-bottom: 1em;
             }
         }
     }
-    @include media-breakpoint-down(md){
-        .difference{
-            &-item{
-                &-title,&-text{
+
+    @include media-breakpoint-down(md) {
+        .difference {
+            &-item {
+
+                &-title,
+                &-text {
                     text-align: center;
                 }
             }
@@ -127,6 +225,7 @@ section.difference {
 
 section.price {
     @include padding(80px 0);
+
     .table {
         thead {
             tr {
@@ -137,19 +236,23 @@ section.price {
                     h4 {
                         text-align: center;
                     }
+
                     h3 {
                         @include font-size(20px);
                     }
+
                     h4 {
                         color: $body-color;
                         @include font-size(30px);
                         margin-bottom: 1em;
                     }
-                    &.popular{
+
+                    &.popular {
                         border: solid $warning;
                         border-width: 2px 2px 0;
                         position: relative;
-                        &-text{
+
+                        &-text {
                             background-color: $warning;
                             color: $white;
                             text-align: center;
@@ -176,14 +279,16 @@ section.price {
                     .fa-times-circle {
                         color: $warning;
                     }
-                    &.popular{
+
+                    &.popular {
                         border-left: 2px solid $warning;
                         border-right: 2px solid $warning;
                     }
                 }
-                &:last-child{
-                    td{
-                        &.popular{
+
+                &:last-child {
+                    td {
+                        &.popular {
                             border-bottom: 2px solid $warning;
                         }
                     }
@@ -197,12 +302,15 @@ section.contact {
     background-color: $primary;
     color: $white;
     @include padding(80px 0);
+
     img {
         height: 1em;
         vertical-align: baseline;
     }
+
     a {
         color: $white;
+
         &:hover {
             opacity: 0.5;
         }
