@@ -7,12 +7,19 @@ section.top {
         }
 
         &-text {
-            @include font-size(24px);
+            
             @include margin-bottom(80px);
         }
 
         &-btn {
             @include margin-bottom(34px);
+        }
+    }
+    @include media-breakpoint-up(lg){
+        .top{
+            &-text{
+                @include font-size(24px);
+            }
         }
     }
 }
@@ -45,7 +52,7 @@ section.about {
                 }
 
                 &.slick-current {
-                    transform: scale(1.2);
+                    transform: scale(1.1) translateY(-1rem);
                     box-shadow: 0 3px 6px rgba($black, 0.16);
                     z-index: 1;
                 }
@@ -54,6 +61,11 @@ section.about {
             &-img {
                 max-width: 100%;
                 margin: 0 auto 0.5rem;
+            }
+            .slick{
+                &-list{
+                    overflow: visible;
+                }
             }
         }
     }
@@ -186,7 +198,8 @@ section.contact {
     color: $white;
     @include padding(80px 0);
     img {
-        vertical-align: bottom;
+        height: 1em;
+        vertical-align: baseline;
     }
     a {
         color: $white;

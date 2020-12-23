@@ -1,7 +1,9 @@
 header{
-    .header{
-        &-logo{
-            
+    .navbar{
+        &-nav{
+            .nav-item{
+                padding: 0 .5em;
+            }
         }
     }
 }
