@@ -16,8 +16,9 @@ $(function () {
         asNavFor: '.about-for',
         focusOnSelect: true,
         arrows: false,
-        responsive: [{
-            breakpoint: 992,
+        responsive: [
+        {
+            breakpoint: 768,
             settings: {
                 slidesToShow: 1,
                 centerMode: true,

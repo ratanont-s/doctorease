@@ -57,6 +57,13 @@ section.about {
             text-align: center;
             box-shadow: 0 -6px 12px rgba($black, 0.16);
             margin-top: -4rem;
+            &-container{
+                @include media-breakpoint-down(sm){
+                    padding-left: 0;
+                    padding-right: 0;
+                    max-width: 100%;
+                }
+            }
 
             &-item {
                 &:focus {
@@ -73,7 +80,7 @@ section.about {
                         &::before {
                             content: '';
                             position: absolute;
-                            top: -20px;
+                            top: -19px;
                             left: 50%;
                             transform: translateX(-50%);
                             border-left: 20px solid transparent;
@@ -85,6 +92,7 @@ section.about {
                     .about-nav-img {
                         width: 104px;
                         height: 104px;
+                        margin: 0 auto;
                     }
                 }
             }

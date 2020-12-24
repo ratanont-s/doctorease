@@ -3,6 +3,34 @@ header{
         &-nav{
             .nav-item{
                 padding: 0 .5em;
+                img{
+                    height: 1em;
+                }
+                a:not(:hover){
+                    color: $body-color;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xs){
+        .navbar{
+            >.container{
+                flex-direction: column;
+            }
+            &-brand{
+                margin: 0 auto;
+            }
+            &-nav{
+                flex-direction: row;
+                width: 100%;
+                li{
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    text-align: center;
+                    a{
+                        display: block;
+                    }
+                }
             }
         }
     }
