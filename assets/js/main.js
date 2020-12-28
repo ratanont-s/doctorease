@@ -26,4 +26,19 @@ $(function () {
             }
         }]
     });
+    $('#priceTable').DataTable({
+        paging:   false,
+        ordering: false,
+        info:     false,
+        searching: false,
+        scrollX:        true,
+        scrollCollapse: true,
+        fixedColumns:   true,
+        columnDefs: [
+            { width: "18%", targets: 1 },
+            { width: "18%", targets: 2 },
+            { width: "18%", targets: 3 },
+            { width: "18%", targets: 4 },
+          ]
+    });
 });

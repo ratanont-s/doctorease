@@ -1,35 +1,42 @@
-header{
-    .navbar{
-        &-nav{
-            .nav-item{
+header {
+    .navbar {
+        &-nav {
+            .nav-item {
                 padding: 0 .5em;
-                img{
+
+                img {
                     height: 1em;
                 }
-                a:not(:hover){
+
+                a:not(:hover) {
                     color: $body-color;
                 }
             }
         }
     }
-    @include media-breakpoint-down(xs){
-        .navbar{
-            >.container{
+
+    @include media-breakpoint-down(xs) {
+        .navbar {
+            >.container {
                 flex-direction: column;
             }
-            &-brand{
+
+            &-brand {
                 margin: 0 auto;
             }
-            &-nav{
-                flex-direction: row;
+
+            &-nav {
+                // flex-direction: row;
                 width: 100%;
-                li{
-                    flex-basis: 0;
-                    flex-grow: 1;
-                    text-align: center;
-                    a{
-                        display: block;
-                    }
+
+                li {
+                    // flex-basis: 0;
+                    // flex-grow: 1;
+                    // text-align: center;
+
+                    // a {
+                    //     display: block;
+                    // }
                 }
             }
         }
