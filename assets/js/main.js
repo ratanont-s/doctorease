@@ -7,7 +7,8 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        // fade: true,
+        fade: true,
+        draggable: false,
         asNavFor: '.about-nav'
     });
     $(".about-nav").slick({
@@ -16,6 +17,7 @@ $(function () {
         asNavFor: '.about-for',
         focusOnSelect: true,
         arrows: false,
+        infinite: false,
         responsive: [
         {
             breakpoint: 768,

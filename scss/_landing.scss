@@ -7,7 +7,6 @@ section.top {
         }
 
         &-text {
-
             @include margin-bottom(80px);
         }
 
@@ -27,20 +26,23 @@ section.top {
 
 section.about {
     @include padding-bottom(80px);
+    position: relative;
     overflow: hidden;
 
     .about {
         &-for {
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: cover;
-
             &-item {
-                @include padding(40px 0 200px);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: cover;
+                @include padding(40px 0 230px);
 
                 h2 {
                     @include font-size(40px);
                     @include margin-bottom(150px);
+                    @include media-breakpoint-down(md) {
+                        @include margin-bottom(15px);
+                    }
                 }
 
                 h3 {
@@ -75,12 +77,12 @@ section.about {
                 &.slick-current {
                     .about-nav-link {
                         position: relative;
-                        border-radius: .25rem;
+                        border-radius: 0.25rem;
                         box-shadow: 0 6px 12px rgba($black, 0.16);
                         transform: translateY(-1em) scale(1.1);
 
                         &::before {
-                            content: '';
+                            content: "";
                             position: absolute;
                             top: -19px;
                             left: 50%;
@@ -118,48 +120,48 @@ section.about {
 
             &-receptionist {
                 .about-nav-img {
-                    background-image: url('../img/พนักงานต้อนรับ-1.png');
+                    background-image: url("../img/พนักงานต้อนรับ-1.png");
                 }
 
                 &.slick-current {
                     .about-nav-img {
-                        background-image: url('../img/พนักงานต้อนรับ-2.png');
+                        background-image: url("../img/พนักงานต้อนรับ-2.png");
                     }
                 }
             }
 
             &-doctor {
                 .about-nav-img {
-                    background-image: url('../img/แพทย์-1.png');
+                    background-image: url("../img/แพทย์-1.png");
                 }
 
                 &.slick-current {
                     .about-nav-img {
-                        background-image: url('../img/แพทย์-2.png');
+                        background-image: url("../img/แพทย์-2.png");
                     }
                 }
             }
 
             &-cashier {
                 .about-nav-img {
-                    background-image: url('../img/แคชเชียร์-1.png');
+                    background-image: url("../img/แคชเชียร์-1.png");
                 }
 
                 &.slick-current {
                     .about-nav-img {
-                        background-image: url('../img/แคชเชียร์-2.png');
+                        background-image: url("../img/แคชเชียร์-2.png");
                     }
                 }
             }
 
             &-owner {
                 .about-nav-img {
-                    background-image: url('../img/เจ้าของคลินิก-1.png');
+                    background-image: url("../img/เจ้าของคลินิก-1.png");
                 }
 
                 &.slick-current {
                     .about-nav-img {
-                        background-image: url('../img/เจ้าของคลินิก-2.png');
+                        background-image: url("../img/เจ้าของคลินิก-2.png");
                     }
                 }
             }
@@ -190,7 +192,8 @@ section.clinic-type {
 
 section.function {
     @include padding(80px 0 0);
-    background: url("../img/DoctorEase-iPad-Web-02-BG.png") no-repeat center top/100% auto;
+    background: url("../img/DoctorEase-iPad-Web-02-BG.png") no-repeat center
+        top/100% auto;
 
     .function {
         &-list {
@@ -223,7 +226,6 @@ section.difference {
     @include media-breakpoint-down(md) {
         .difference {
             &-item {
-
                 &-title,
                 &-text {
                     text-align: center;
@@ -235,6 +237,41 @@ section.difference {
 
 section.price {
     @include padding(80px 0);
+    position: relative;
+    overflow-x: hidden;
+    .price-table {
+        position: relative;
+        &-note {
+            
+            h3 {
+                @include font-size(20px);
+                span {
+                    font-weight: normal;
+                    
+                }
+            }
+            br{
+                display: none;
+            }
+            @media (min-width: 1400px) {
+                position: absolute;
+                top: 15%;
+                right: -12%;
+                text-align: center;
+                h3 span{
+                    margin-top: 0.5em;
+                }
+                br,span{
+                    display: block;
+                }
+            }
+        }
+    }
+    .DTFC_LeftHeadWrapper {
+        > .table {
+            border-left-color: transparent;
+        }
+    }
 
     .table {
         border-top-color: transparent;
@@ -318,7 +355,6 @@ section.price {
 
         tfoot {
             tr {
-
                 th,
                 td {
                     border-top-color: transparent;

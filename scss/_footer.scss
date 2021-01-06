@@ -8,6 +8,15 @@ footer{
             opacity: 0.5;
         }
     }
+    .list-contact-info{
+        li{
+            display: flex;
+            strong{
+                min-width: 60px;
+                font-weight: normal;
+            }
+        }
+    }
     .list-social{
         li{
             a{
