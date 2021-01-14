@@ -34,11 +34,12 @@ section.about {
             &-item {
                 background-repeat: no-repeat;
                 background-position: left center;
-                background-size: cover;
+                background-size: auto;
                 @include padding(40px 0 230px);
 
                 @include media-breakpoint-up(lg){
                     background-position: center center;
+                    background-size: cover;
                 }
 
                 h2 {
