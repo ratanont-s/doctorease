@@ -37,6 +37,10 @@ section.about {
                 background-size: cover;
                 @include padding(40px 0 230px);
 
+                @include media-breakpoint-up(lg){
+                    background-position: center center;
+                }
+
                 h2 {
                     @include font-size(40px);
                     @include margin-bottom(150px);

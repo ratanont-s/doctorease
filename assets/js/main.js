@@ -9,7 +9,9 @@ $(function () {
         arrows: false,
         fade: true,
         draggable: false,
-        asNavFor: '.about-nav'
+        asNavFor: '.about-nav',
+        touchMove:false,
+        swipe: false,
     });
     $(".about-nav").slick({
         slidesToShow: 4,
