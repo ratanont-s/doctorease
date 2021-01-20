@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'DB Helvethaica X';
+    src: url('../fonts/DBHelvethaicaX-65Med.woff2') format('woff2'),
+        url('../fonts/DBHelvethaicaX-65Med.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Helvethaica X';
+    src: url('../fonts/DBHelvethaicaX-45Li.woff2') format('woff2'),
+        url('../fonts/DBHelvethaicaX-45Li.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Helvethaica X';
+    src: url('../fonts/DBHelvethaicaX-75Bd.woff2') format('woff2'),
+        url('../fonts/DBHelvethaicaX-75Bd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
