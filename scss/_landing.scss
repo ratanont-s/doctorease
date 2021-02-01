@@ -18,7 +18,7 @@ section.top {
     @include media-breakpoint-up(lg) {
         .top {
             &-text {
-                @include font-size(24px);
+                @include font-size(1.5em);
             }
         }
     }
@@ -43,7 +43,7 @@ section.about {
                 }
 
                 h2 {
-                    @include font-size(40px);
+                    @include font-size(2.5em);
                     @include margin-bottom(150px);
                     @include media-breakpoint-down(md) {
                         @include margin-bottom(15px);
@@ -51,11 +51,11 @@ section.about {
                 }
 
                 h3 {
-                    @include font-size(30px);
+                    @include font-size(2em);
                 }
 
                 p {
-                    @include font-size(20px);
+                    @include font-size(1.25em);
                     font-weight: 500;
                 }
             }
@@ -108,7 +108,7 @@ section.about {
             }
 
             &-link {
-                @include font-size(20px);
+                @include font-size(1.25em);
                 display: inline-block;
                 @include padding(20px 30px);
                 background-color: $white;
@@ -189,6 +189,9 @@ section.clinic-type {
     .clinic-type {
         &-item {
             text-align: center;
+            h5{
+                @include font-size(1.25em);
+            }
         }
 
         &-img {
@@ -252,7 +255,7 @@ section.price {
         &-note {
             
             h3 {
-                @include font-size(20px);
+                @include font-size(1.25em);
                 span {
                     font-weight: normal;
                     
@@ -302,12 +305,12 @@ section.price {
                     }
 
                     h3 {
-                        @include font-size(20px);
+                        @include font-size(1.25em);
                     }
 
                     h4 {
                         color: $body-color;
-                        @include font-size(30px);
+                        @include font-size(2em);
                         margin-bottom: 1em;
                         line-height: 1;
                         small{
